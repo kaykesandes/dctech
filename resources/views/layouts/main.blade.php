@@ -15,10 +15,10 @@
                 </a>
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a href="/" class="nav-link">Dashboard</a>
+                        <a href="{{ route('vendas.index') }}" class="nav-link">Vendas</a>
                     </li>
                     <li class="nav-item">
-                        <a href="/" class="nav-link">Registrar venda</a>
+                        <a href="{{ route('vendas.create') }}" class="nav-link">Cadastrar venda</a>
                     </li>
                     <li class="nav-item">
                         <a href="/" class="nav-link">Gerar PDF</a>
@@ -31,5 +31,7 @@
         <footer>
             <p>Kayke &copy; 2023</p>
         </footer>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
     </body>
 </html>

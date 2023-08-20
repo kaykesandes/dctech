@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\ProductController;
+use App\Http\Controllers\VendasController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,20 +14,7 @@ use App\Http\Controllers\ProductController;
 |
 */
 
-Route::resource('products', ProductController::class);
-
-// Route::group('/products', function () {
-//     Route::get('/', [ProductController::class, 'index'])->name('product.index');
-//     Route::get('/create', [ProductController::class, 'create'])->name('product.create');
-//     Route::get('/edit/{id}', [ProductController::class, 'edit'])->name('product.edit');
-//     Route::get('/delete/{id}', [ProductController::class, 'delete'])->name('product.delete');
-// });
-
-// Route::get('/products', [ProductController::class, 'index'])->name('product.index');
-// Route::get('/products/create', [ProductController::class, 'create'])->name('product.create');
-// Route::get('/products/edit/{id}', [ProductController::class, 'edit'])->name('product.edit');
-// Route::get('/products/delete/{id}', [ProductController::class, 'delete'])->name('product.delete');
-
-Route::get('/register', function(){
-    return view('register');
+Route::get('/', function () {
+    return redirect()->route('vendas.create');
 });
+Route::resource('vendas', VendasController::class);
