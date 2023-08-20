@@ -1,11 +1,14 @@
-@extends('layouts.main')
+<x-app-layout>
+    <x-slot name="header">
+        <h2 class="font-semibold text-xl text-gray-800 leading-tight">
+            {{ __('Registrar venda') }}
+        </h2>
+    </x-slot>
 
-@section('title', 'Cadastrar Vendas')
-
-@section('main')
-
-<div class="container mt-5">
-    <h1 class="mb-4">Cadastro de Venda</h1>
+    <div class="py-12">
+        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
+            <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
+            <div class="container mt-5">
     @if(count($errors) > 0)
         <div class="row">
             <div class="col-md-12">
@@ -130,4 +133,7 @@
 
         });
     </script>
-@endsection
+            </div>
+        </div>
+    </div>
+</x-app-layout>

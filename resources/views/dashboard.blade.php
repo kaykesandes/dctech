@@ -1,9 +1,14 @@
-@extends('layouts.main')
+<x-app-layout>
+    <x-slot name="header">
+        <h2 class="font-semibold text-xl text-gray-800 leading-tight">
+            {{ __('Dashboard') }}
+        </h2>
+    </x-slot>
 
-@section('title', 'Dashboard')
-
-@section('main')
-<div class="container">
+    <div class="py-12">
+        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
+            <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
+            <div class="container">
     <div class="row">
         <div id="events-container" class="col-md-12">
             @if ($notification = Session::get('success'))
@@ -49,7 +54,7 @@
                             <form action="{{ route('vendas.destroy', ['venda' => $venda['id']]) }}" method="post" style="display: inline;">
                                 @csrf
                                 @method('delete')
-                                <button type="submit" class="btn btn-danger" style="width: 90px;">Apagar</button>
+                                <button type="submit" class="btn btn-danger active" style="width: 90px;">Apagar</button>
                             </form>
                         </td>
 
@@ -60,4 +65,7 @@
         </div>
     </div>
 </div>
-@endsection
+            </div>
+        </div>
+    </div>
+</x-app-layout>

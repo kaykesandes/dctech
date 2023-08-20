@@ -1,11 +1,15 @@
-@extends('layouts.main')
+<x-app-layout>
+    <x-slot name="header">
+        <h2 class="font-semibold text-xl text-gray-800 leading-tight">
+            {{ __('Editar venda') }}
+        </h2>
+    </x-slot>
 
-@section('title', 'Alterar Vendas')
+    <div class="py-12">
+        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
+            <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
 
-@section('main')
-
-<div class="container mt-5">
-    <h1 class="mb-4">Alteração de Venda</h1>
+            <div class="container mt-5">
     @if(count($errors) > 0)
         <div class="row">
             <div class="col-md-12">
@@ -81,7 +85,10 @@
             </table>
         </div>
 
-        <button type="submit" class="btn btn-primary">Alterar Venda</button>
+        <div class="mb-3">
+            <button type="submit" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Alterar Venda</button>
+        </div>
+
     
     </form>
     </div>
@@ -134,4 +141,9 @@
 
         });
     </script>
-@endsection
+
+
+            </div>
+        </div>
+    </div>
+</x-app-layout>

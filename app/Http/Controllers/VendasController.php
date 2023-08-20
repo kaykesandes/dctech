@@ -11,7 +11,7 @@ class VendasController extends Controller
     public function index()
     {   
         $vendas = Venda::all();
-        return view('vendas.index', compact('vendas')); 
+        return view('dashboard', compact('vendas')); 
     }
     
     public function create()
@@ -21,7 +21,7 @@ class VendasController extends Controller
 
     public function edit(Venda $venda)
     {
-        return view('vendas.edit', compact('venda'));
+        return view('saleedit', compact('venda'));
     }
 
     public function show($id)
