@@ -79,9 +79,9 @@
                 </tbody>
             </table>
         </div>
-
-        <button type="submit" class="btn btn-primary">Cadastrar Venda</button>
-    
+        <div class="mb-3">
+        <button type="submit" class="btn btn-primary active">Cadastrar Venda</button>
+        </div>
     </form>
     </div>
     <script>
