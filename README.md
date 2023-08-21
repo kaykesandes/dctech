@@ -1,6 +1,6 @@
 # DC Tech Project
 
-Este é o projeto DC Tech, uma breve descrição do projeto.
+Este é o projeto da DC Tech.
 
 ## Requisitos
 
